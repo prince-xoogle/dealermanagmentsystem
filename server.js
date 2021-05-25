@@ -16,8 +16,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //Join Public Fodler
 app.use(express.static(path.join(__dirname, 'public')));
-
 //Login Router 
 app.use('/',loginRouter);
 app.use('/Dashboard',dashboardRouter);
+
 app.listen(process.env.APP_PORT, () => console.log(`SERVER STARTED AT PORT ${process.env.APP_PORT}`));
